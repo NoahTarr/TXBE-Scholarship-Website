@@ -1,13 +1,120 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "PT Sans", "sans-serif";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 9.375rem;
+}
+
+.inner-row-container {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 4rem;
+    max-width: 1300px;
+}
+
+.row:nth-child(even) {
+    background-color: #1c2237;
+    color: #ffffff;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 50%;
+}
+
+img {
+    max-width: 34.688rem;
+    align-self: flex-end;
+}
+
+.row:nth-child(even) img {
+    align-self: flex-start;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0 0 1.5rem 0;
+}
+
+h2 {
+    color: #f00946;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.087rem;
+    line-height: 1rem;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin: 0;
+    max-width: 27.5rem;
+}
+
+a {
+    text-decoration: none;
+    width: fit-content;
+    margin-top: 2rem;
+}
+
+button {
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 4rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+    background-color: #276afb;
+    transition: background-color 0.15s ease;
+}
+
+button:hover {
+    background-color: #f00946;
+}
+
+@media screen and (max-width: 1500px) {
+    img {
+        max-width: 25rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .row {
+        padding: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        justify-content: initial;
+    }
+
+    .inner-row-container {
+        flex-direction: column;
+        column-gap: 4rem;
+    }
+
+    img {
+        max-width: 34.688rem;
+        align-self: flex-start;
+    }
 }
